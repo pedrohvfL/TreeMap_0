@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+}
+
+section .coluna{
+    display: grid;
+    grid-template-areas:
+    "d1 d2 d3"
+    "d4 d4 d4";
+    gap: 7px;
+}
+
+.d1{
+    grid-area: d1;
+}
+
+.d2{
+    grid-area: d2;
+}
+
+.d3{
+    grid-area: d3;
+}
+
+.d4{
+    grid-area: d4;
+}
+
+.coluna div{
+    display: flex;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.coluna:nth-child(1) div{
+    transition: all 200ms ease;
+    background-color: green;
+}
+
+
+.coluna:nth-child(2) div{
+    transition: all 200ms ease;
+    background-color: blue;
+}
+
+.coluna div:hover{
+    background-color: rgb(226, 101, 43);
+    scale: 1.05;
+    transition: all 1800ms ease;
+}
